@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1040.0" style="-fx-background-color: #DCE2F0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendpassengertransportation.controller.BookingsCurrentPassengerController">
+    <children>
+        <VBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="1040.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Список всех ваших бронирований">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutY="43.0" prefHeight="690.0" prefWidth="1040.0">
+            <children>
+                <TableView fx:id="bookingsTable" prefHeight="590.0" prefWidth="1000.0">
+                    <columns>
+                        <TableColumn fx:id="transportTypeColumn" prefWidth="100.0" text="Тип транспорта" />
+                        <TableColumn fx:id="departureCityColumn" prefWidth="130.0" text="Город отправления" />
+                        <TableColumn fx:id="destinationCityColumn" prefWidth="130.0" text="Город назначения" />
+                        <TableColumn fx:id="departureTimeColumn" prefWidth="170.0" text="Дата и время отправления" />
+                        <TableColumn fx:id="arrivalTimeColumn" prefWidth="160.0" text="Дата и время прибытия" />
+                        <TableColumn fx:id="availableSeatsColumn" prefWidth="180.0" text="Количество свободных мест" />
+                        <TableColumn fx:id="showBookingColumn" prefWidth="110.0" text="Посмотреть" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="30.0" />
+                    </VBox.margin>
+                </TableView>
+                <VBox alignment="CENTER_LEFT" layoutY="670.0" prefHeight="74.0" prefWidth="99.0">
+                    <children>
+                        <Button fx:id="backButton" onAction="#handleBackButton" style="-fx-background-color: transparent;" stylesheets="@../style.css">
+                            <graphic>
+                                <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/back.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

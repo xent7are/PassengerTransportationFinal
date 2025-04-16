@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1040.0" style="-fx-background-color: #DCE2F0;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendpassengertransportation.controller.MainController">
+    <children>
+        <VBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="1040.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Бронирование билетов на транспорт">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutY="70.0" prefHeight="670.0" prefWidth="1040.0" spacing="20">
+            <children>
+                <VBox alignment="TOP_CENTER" spacing="10.0">
+                    <children>
+                        <Label prefWidth="271.0" text="Подбор подходящих маршрутов" />
+                        <Label text="Введите параметры, по которым будет осуществляться поиск подходящих маршрутов" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/plane.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/train.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/bus.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <Label text="Тип транспорта:" />
+                        <ComboBox fx:id="transportTypeComboBox" prefHeight="26.0" prefWidth="270.0" promptText="Выберите тип транспорта" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </VBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="270.0" spacing="10">
+                            <children>
+                                <Label text="Город отправления:" />
+                                <ComboBox fx:id="departureCityComboBox" prefHeight="26.0" prefWidth="270.0" promptText="Выберите город отправления" />
+                            </children>
+                            <HBox.margin>
+                                <Insets right="50.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/planet.png" />
+                            </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefWidth="270.0" spacing="10">
+                            <children>
+                                <Label text="Город назначения:" />
+                                <ComboBox fx:id="destinationCityComboBox" prefHeight="26.0" prefWidth="270.0" promptText="Введите город назначения" style="-fx-background-color: #adcfc7;" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="75.0" prefWidth="960.0" spacing="10">
+                    <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="270.0" spacing="10">
+                            <children>
+                                <Label text="Дата отправления:" />
+                                <DatePicker fx:id="startDatePicker" prefHeight="26.0" prefWidth="270.0" promptText="Дата в формате дд.мм.гггг" style="-fx-background-color: #d2e7d1;" />
+                            </children>
+                            <HBox.margin>
+                                <Insets right="50.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/clock.png" />
+                            </image>
+                        </ImageView>
+                        <VBox prefHeight="75.0" prefWidth="270.0" spacing="10">
+                            <children>
+                                <Label text="Дата отправления (по):">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin></Label>
+                                <DatePicker fx:id="endDatePicker" prefHeight="26.0" prefWidth="270.0" promptText="Дата в формате дд.мм.гггг" style="-fx-background-color: #adcfc7;" />
+                            </children>
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <VBox alignment="TOP_CENTER" stylesheets="@../style.css">
+                    <children>
+                        <Button fx:id="showAllRoutesButton" onAction="#handleShowAllRoutesButton" prefHeight="40.0" prefWidth="450.0" text="Отобразить список всех доступных маршрутов (без фильтра)">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="showRoutesWithFilterButton" onAction="#handleShowRoutesWithFilterButton" prefHeight="40.0" prefWidth="450.0" text="Отобразить список маршрутов по указанному фильтру">
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="ShowPassengerBookingsButton" onAction="#handleShowPassengerBookingsButton" prefHeight="40.0" prefWidth="450.0" text="Посмотреть мои бронирования">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" />
+            </padding>
+        </VBox>
+        <VBox alignment="CENTER_LEFT" layoutY="656.0" prefHeight="74.0" prefWidth="99.0">
+            <children>
+                <Button fx:id="backButton" onAction="#handleBackButton" style="-fx-background-color: transparent;" stylesheets="@../style.css">
+                    <graphic>
+                        <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/back.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="941.0" layoutY="0.0" prefHeight="100.0" prefWidth="99.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <Button fx:id="accountButton" onAction="#handleAccountButton" style="-fx-background-color: transparent;" stylesheets="@../style.css">
+                    <graphic>
+                        <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/account.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label style="-fx-font-family: Arial; -fx-font-size: 12px;" text="Мои данные" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+               <padding>
+                  <Insets top="-20.0" />
+               </padding>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </VBox>
+    </children>
+</AnchorPane>

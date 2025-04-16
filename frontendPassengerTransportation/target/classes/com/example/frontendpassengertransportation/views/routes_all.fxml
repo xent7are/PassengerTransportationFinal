@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1040.0" style="-fx-background-color: #DCE2F0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendpassengertransportation.controller.AllRoutesController">
+    <children>
+        <VBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="1040.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Список всех доступных маршрутов">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutY="43.0" prefHeight="690.0" prefWidth="1040.0">
+            <children>
+                <TableView fx:id="routesTable" prefHeight="600.0" prefWidth="1000.0">
+                    <columns>
+                        <TableColumn fx:id="transportTypeColumn" prefWidth="100.0" text="Тип транспорта" />
+                        <TableColumn fx:id="departureCityColumn" prefWidth="130.0" text="Город отправления" />
+                        <TableColumn fx:id="destinationCityColumn" prefWidth="130.0" text="Город назначения" />
+                        <TableColumn fx:id="departureTimeColumn" prefWidth="170.0" text="Дата и время отправления" />
+                        <TableColumn fx:id="arrivalTimeColumn" prefWidth="160.0" text="Дата и время прибытия" />
+                        <TableColumn fx:id="availableSeatsColumn" prefWidth="180.0" text="Количество свободных мест" />
+                        <TableColumn fx:id="bookingColumn" prefWidth="126.0" text="Бронирование" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="30.0" />
+                    </VBox.margin>
+                </TableView>
+                <VBox prefHeight="190.0" prefWidth="100.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1040.0" spacing="10.0">
+                            <children>
+                                <Button fx:id="prevPageButton" onAction="#handlePrevPage" style="-fx-background-color: transparent;" stylesheets="@../style.css">
+                                    <graphic>
+                                        <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/back.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <VBox alignment="CENTER">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Переход между страницами с маршрутами">
+                                            <font>
+                                                <Font name="Arial" size="16.0" />
+                                            </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                        </Text>
+                                        <Label fx:id="pageLabel" style="-fx-font-family: Arial; -fx-font-size: 16px; -fx-text-fill: black;" text="Страница 1 из ...">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font></Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </VBox>
+                                <Button fx:id="nextPageButton" onAction="#handleNextPage" style="-fx-background-color: transparent;" stylesheets="@../style.css">
+                                    <graphic>
+                                        <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                            <image>
+                                                <Image url="@../images/back.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="99.0">
+                            <children>
+                                <Button fx:id="backButton" onAction="#handleBackButton" style="-fx-background-color: transparent;" stylesheets="@../style.css">
+                                    <graphic>
+                                        <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/back.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

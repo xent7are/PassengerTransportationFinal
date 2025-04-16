@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="640.0" style="-fx-background-color: #DCE2F0;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendpassengertransportation.controller.AuthorizationController">
+   <children>
+      <VBox alignment="CENTER" spacing="15.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Text text="Авторизация">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <VBox spacing="5">
+               <Label text="ФИО:">
+                  <VBox.margin>
+                     <Insets left="5.0" />
+                  </VBox.margin></Label>
+               <TextField fx:id="fullNameField" text="Стебунов Никита Юрьевич" prefWidth="250.0" promptText="Введите ФИО" />
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox spacing="5">
+               <Label text="Email:">
+                  <VBox.margin>
+                     <Insets left="5.0" />
+                  </VBox.margin></Label>
+               <TextField fx:id="emailField" prefWidth="250.0" text="xent7are557@gmail.com" promptText="Введите электронную почту" />
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox spacing="5">
+               <Label text="Пароль:">
+                  <VBox.margin>
+                     <Insets left="5.0" />
+                  </VBox.margin></Label>
+               <PasswordField fx:id="passwordField" text="Nikita2006" prefWidth="250.0" promptText="Введите пароль" />
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" spacing="30">
+               <VBox alignment="CENTER" spacing="5">
+                  <Label text="Нет аккаунта?" />
+                  <Button fx:id="registerButton" onAction="#handleRegisterButton" prefWidth="180.0" text="Регистрация" />
+               </VBox>
+               <VBox alignment="BOTTOM_CENTER">
+                  <children>
+                     <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLoginButton" prefWidth="180.0" text="Войти" />
+                  </children>
+               </VBox>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

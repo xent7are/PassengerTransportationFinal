@@ -1,0 +1,128 @@
+/* Стили для Label */
+.label {
+    -fx-font-size: 18px;
+    -fx-font-family: "Arial";
+}
+
+/* Основные стили для кнопок */
+.button {
+    -fx-background-color: #adcfc7;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+/* Стили для кнопки при наведении */
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Стили для кнопки при нажатии */
+.button:pressed {
+    -fx-background-color: #adcfc7;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 3, 0, 0, 1);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Стили для ComboBox */
+.combo-box {
+    -fx-background-color: #adcfc7;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 35px;
+}
+
+/* Стили для выпадающего списка ComboBox */
+.combo-box-popup .list-view {
+    -fx-background-color: #adcfc7;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+}
+
+/* Стили для элементов списка ComboBox */
+.combo-box-popup .list-cell {
+    -fx-background-color: #adcfc7;
+    -fx-text-fill: black;
+}
+
+/* Стили для элементов списка ComboBox при наведении */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+/* Стили для DatePicker */
+.date-picker {
+    -fx-background-color: #adcfc7;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Стили для текстового поля DatePicker */
+.date-picker .text-field {
+    -fx-background-color: #adcfc7;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: #323232;
+}
+
+/* Стили для выпадающего календаря DatePicker */
+.date-picker-popup {
+    -fx-background-color: #adcfc7;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+}
+
+/* Стили для кнопок в календаре DatePicker */
+.date-picker-popup .day-cell {
+    -fx-background-color: #adcfc7;
+    -fx-text-fill: black;
+}
+
+/* Стили для кнопок в календаре DatePicker при наведении */
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+/* Стили для TextField */
+.text-field {
+    -fx-background-color: #adcfc7;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-pref-height: 35px;
+    -fx-prompt-text-fill: #323232;
+}
+
+/* Стили для TextField при наведении */
+.text-field:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 2);
+}
+
+/* Стили для TextField при фокусе */
+.text-field:focused {
+    -fx-background-color: #adcfc7;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 2);
+}
