@@ -22,7 +22,7 @@
                   <VBox.margin>
                      <Insets left="5.0" />
                   </VBox.margin></Label>
-               <TextField fx:id="fullNameField" text="Стебунов Никита Юрьевич" prefWidth="250.0" promptText="Введите ФИО" />
+               <TextField fx:id="fullNameField" prefWidth="250.0" promptText="Введите ФИО" />
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
@@ -32,7 +32,7 @@
                   <VBox.margin>
                      <Insets left="5.0" />
                   </VBox.margin></Label>
-               <TextField fx:id="emailField" prefWidth="250.0" text="xent7are557@gmail.com" promptText="Введите электронную почту" />
+               <TextField fx:id="emailField" prefWidth="250.0" promptText="Введите электронную почту" />
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
@@ -42,7 +42,7 @@
                   <VBox.margin>
                      <Insets left="5.0" />
                   </VBox.margin></Label>
-               <PasswordField fx:id="passwordField" text="Nikita2006" prefWidth="250.0" promptText="Введите пароль" />
+               <PasswordField fx:id="passwordField" prefWidth="250.0" promptText="Введите пароль" />
                <padding>
                   <Insets bottom="10.0" />
                </padding>
